@@ -4,6 +4,7 @@ import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import { urlFor } from '../sanity'
+import Image from 'next/image'
 
 type Props = {
   pageInfo: PageInfo
@@ -23,7 +24,7 @@ export default function Hero({pageInfo}: Props) {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
-      <img className='relative rounded-full h-32 w-32 mx-auto object-cover' src={urlFor(pageInfo?.heroImage).url()} alt='Hero Icon Harsh' />
+      <Image className='relative rounded-full h-32 w-32 mx-auto object-cover' src={urlFor(pageInfo?.heroImage).url()} alt='Hero Icon Harsh' />
       
     <div className='z-20'>
       <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>{pageInfo?.role}</h2>

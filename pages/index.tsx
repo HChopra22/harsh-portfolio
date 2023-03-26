@@ -14,6 +14,7 @@ import { fetchSocial } from '@/utils/fetchSocials'
 import { fetchProjects } from '@/utils/fetchProjects'
 import { fetchSkills } from '@/utils/fetchSkills'
 import { fetchExperiences } from '@/utils/fetchExperiences'
+import Image from 'next/image'
 
 
 type Props = {
@@ -61,7 +62,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials}: Props) => {
       <Link href='#hero'>
       <footer className='sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
-          <img className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' src='' alt='' />
+          <Image className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer' src='' alt='' />
         </div>
       </footer>
       </Link>
